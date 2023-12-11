@@ -3,5 +3,4 @@ export class semester{
     name = '';
     description = '';
     learningGoals = [];
-    
 }
