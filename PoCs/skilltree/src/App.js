@@ -3,6 +3,8 @@ import cloud from './cloud.png'
 import logo from './logo.svg';
 import {useState, useEffect, useRef} from 'react';
 import './App.css';
+import './LearningGoalGradeStyles.css'
+import './SkillGradeStyle.css'
 
 //import { maptrees } from './maptree';
 import {semester} from './semester';
@@ -13,7 +15,6 @@ import studentdata from './studentskills.json';
 import {Tooltip} from 'react-tooltip';
 import {GetTrees} from './fetchtree';
 import Header from "./Components/Header";
-
 
 const cors = require('cors');
 
@@ -173,17 +174,6 @@ function App() {
 
                                         <div className="child3">
                                             <Header></Header>
-                                            {/*<div class="flex-container2">*/}
-                                            {/*    <div className='flex-items'>*/}
-                                            {/*        <img src={tree}></img>*/}
-                                            {/*    </div>*/}
-                                            {/*    <div className='flex-items'>*/}
-                                            {/*        <div style={header}>Skilltree</div>*/}
-                                            {/*    </div>*/}
-                                            {/*    <div className='flex-items'>*/}
-                                            {/*        <img src={tree}></img>*/}
-                                            {/*    </div>*/}
-                                            {/*</div>*/}
 
                                             <div style={topcorner}> Gedeeld met mij:
                                                 <select style={marginleft} value={selects}
@@ -285,6 +275,12 @@ function App() {
                                                                 <div className='child21'>
 
 
+                                                                    {/*<LearningGoals key={learninggoal.id}*/}
+                                                                    {/*               learningGoal={learninggoal}*/}
+                                                                    {/*               grade={learningGoalDecision}*/}
+                                                                    {/*               id={lgid}*/}
+                                                                    {/*/!*               ref={lgRef}*!/*/}
+                                                                    {/*></LearningGoals>*/}
                                                                     <p key={learninggoal.id} id={lgid} ref={lgRef}
                                                                        style={learningGoalStyle}>
                                                                         {learninggoal.name}
