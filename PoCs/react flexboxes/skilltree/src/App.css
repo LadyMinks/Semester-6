@@ -34,10 +34,11 @@
   text-align:center
 }
 
-.Skill-flex{
+.SkillList-flex{
   display: flex;
   background-color: #2a0016;
   flex-direction: row;
+  height: 520px;
   color: white;
   justify-content: space-between;
   padding: 10px;
@@ -45,6 +46,7 @@
 }
 
 .SingleSkill-flex{
+  background-color: black;
   height: 500px;
   padding: 10px;
   border: 1px solid white;
