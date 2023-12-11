@@ -1,6 +1,4 @@
 import LearningGoal from "./LearningGoal";
-import learningGoal from "./LearningGoal";
-import data from "./database.json";
 
 export default function LearningGoalList({learningGoals}){
 
