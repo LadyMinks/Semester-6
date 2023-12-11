@@ -1,0 +1,6 @@
+export class learninggoal{
+    id = Number
+    name = '';
+    description = '';
+    skills = [];
+}
