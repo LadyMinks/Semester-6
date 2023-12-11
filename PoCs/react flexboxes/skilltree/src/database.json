@@ -1,0 +1,216 @@
+[
+  {
+    "id": 1,
+    "name": "Semester 2 Software Engineering",
+    "description": "Semester 2 for Software Engineering students",
+    "learningGoals": [
+      {
+        "id": 1,
+        "name": "Analyse",
+        "description": "Analytical skills for Software Engineering",
+        "skills": [
+          {
+            "id": 1,
+            "name": "Architectuur: Meerlaagse Architectuur",
+            "description": "Understanding layered architecture",
+            "sources": "www.fontys.nl"
+          },
+          {
+            "id": 2,
+            "name": "Domeinmodellen",
+            "description": "Creating domain models",
+            "sources": "www.fontys.nl"
+          },
+          {
+            "id": 3,
+            "name": "Klassendiagrammen",
+            "description": "Designing class diagrams",
+            "sources": "www.fontys.nl"
+          },
+          {
+            "id": 4,
+            "name": "Databaseontwerp",
+            "description": "Designing databases",
+            "sources": "www.fontys.nl"
+          }
+        ]
+      },
+
+      {
+        "id": 2,
+        "name": "Ontwerpen",
+        "description": "Design skills for Software Engineering",
+        "skills": [
+          {
+            "id": 5,
+            "name": "Analyse",
+            "description": "Analyzing requirements",
+            "sources": "www.fontys.nl"
+          },
+          {
+            "id": 6,
+            "name": "Requirements en use-cases",
+            "description": "Creating requirements and use-cases",
+            "sources": "www.fontys.nl"
+          },
+          {
+            "id": 7,
+            "name": "Contextdiagram en Conceptueel Model",
+            "description": "Designing context diagrams and conceptual models",
+            "sources": "www.fontys.nl"
+          },
+          {
+            "id": 8,
+            "name": "UI schetsen",
+            "description": "Creating UI sketches",
+            "sources": "www.fontys.nl"
+          },
+          {
+            "id": 9,
+            "name": "Testplan",
+            "description": "Developing test plans",
+            "sources": "www.fontys.nl"
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "Advies",
+        "description": "Analytical skills for Software Engineering",
+        "skills": [
+          {
+            "id": 10,
+            "name": "Architectuur: Meerlaagse Architectuur",
+            "description": "Understanding layered architecture",
+            "sources": "www.fontys.nl"
+          },
+          {
+            "id": 11,
+            "name": "Domeinmodellen",
+            "description": "Creating domain models",
+            "sources": "www.fontys.nl"
+          },
+          {
+            "id": 12,
+            "name": "Klassendiagrammen",
+            "description": "Designing class diagrams",
+            "sources": "www.fontys.nl"
+          },
+          {
+            "id": 13,
+            "name": "Databaseontwerp",
+            "description": "Designing databases",
+            "sources": "www.fontys.nl"
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "Realisatie",
+        "description": "Analytical skills for Software Engineering",
+        "skills": [
+          {
+            "id": 14,
+            "name": "Architectuur: Meerlaagse Architectuur",
+            "description": "Understanding layered architecture",
+            "sources": "www.fontys.nl"
+          },
+          {
+            "id": 15,
+            "name": "Domeinmodellen",
+            "description": "Creating domain models",
+            "sources": "www.fontys.nl"
+          },
+          {
+            "id": 16,
+            "name": "Klassendiagrammen",
+            "description": "Designing class diagrams",
+            "sources": "www.fontys.nl"
+          },
+          {
+            "id": 17,
+            "name": "Databaseontwerp",
+            "description": "Designing databases",
+            "sources": "www.fontys.nl"
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "Onderhoud",
+        "description": "Analytical skills for Software Engineering",
+        "skills": [
+          {
+            "id": 18,
+            "name": "Architectuur: Meerlaagse Architectuur",
+            "description": "Understanding layered architecture",
+            "sources": "www.fontys.nl"
+          },
+          {
+            "id": 19,
+            "name": "Domeinmodellen",
+            "description": "Creating domain models",
+            "sources": "www.fontys.nl"
+          },
+          {
+            "id": 20,
+            "name": "Klassendiagrammen",
+            "description": "Designing class diagrams",
+            "sources": "www.fontys.nl"
+          },
+          {
+            "id": 21,
+            "name": "Databaseontwerp",
+            "description": "Designing databases",
+            "sources": "www.fontys.nl"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Semester 3 Technology",
+    "description": "Semester 3 for Technology students",
+    "learningGoals": [
+      {
+        "id": 3,
+        "name": "Testen",
+        "description": "Test skills for Technology",
+        "skills": [
+          {
+            "id": 10,
+            "name": "Geautomatiseerd (unit-) testen",
+            "description": "Understanding automated unit testing",
+            "sources": "www.fontys.nl"
+          },
+          {
+            "id": 11,
+            "name": "Acceptatietesten",
+            "description": "Performing acceptance testing",
+            "sources": "www.fontys.nl"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Object Oriented Programming",
+        "description": "OOP skills for Technology",
+        "skills": [
+          {
+            "id": 12,
+            "name": "OO Principes",
+            "description": "Understanding Object Oriented Principles",
+            "sources": "www.fontys.nl"
+          },
+          {
+            "id": 13,
+            "name": "De SOLID principes",
+            "description": "Applying SOLID principles",
+            "sources": "www.fontys.nl"
+          }
+        ]
+      }
+    ]
+  }
+]
