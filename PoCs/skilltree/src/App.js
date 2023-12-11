@@ -12,6 +12,7 @@ import data from './db.json';
 import studentdata from './studentskills.json';
 import {Tooltip} from 'react-tooltip';
 import {GetTrees} from './fetchtree';
+import Header from "./Components/Header";
 
 
 const cors = require('cors');
@@ -133,7 +134,6 @@ function App() {
 
 //let studentobject = studentdata.find(e => e.name == 'Ilias');
 
-
     function Showdata() {
         let dropdownstudents = [{value: "Antonio", label: 'Antonio'}, {
             value: "Ilias",
@@ -164,7 +164,6 @@ function App() {
                             studentObject = studentdata.find(e => e.name == selects);
                         }
 
-
                         if (semester.name == 'Semester 2 Software Engineering') {
 
                             return (
@@ -173,18 +172,18 @@ function App() {
                                     <div className='parent'>
 
                                         <div className="child3">
-                                            <div class="flex-container2">
-                                                <div className='flex-items'>
-                                                    <img src={tree}></img>
-                                                </div>
-                                                <div className='flex-items'>
-                                                    <div style={header}>Skilltree</div>
-                                                </div>
-                                                <div className='flex-items'>
-                                                    <img src={tree}></img>
-                                                </div>
-                                            </div>
-
+                                            <Header></Header>
+                                            {/*<div class="flex-container2">*/}
+                                            {/*    <div className='flex-items'>*/}
+                                            {/*        <img src={tree}></img>*/}
+                                            {/*    </div>*/}
+                                            {/*    <div className='flex-items'>*/}
+                                            {/*        <div style={header}>Skilltree</div>*/}
+                                            {/*    </div>*/}
+                                            {/*    <div className='flex-items'>*/}
+                                            {/*        <img src={tree}></img>*/}
+                                            {/*    </div>*/}
+                                            {/*</div>*/}
 
                                             <div style={topcorner}> Gedeeld met mij:
                                                 <select style={marginleft} value={selects}
@@ -193,11 +192,8 @@ function App() {
                                                     {studentdata.map((student) => {
                                                         return (<option>{student.name}</option>)
                                                     })}
-
-
                                                 </select>
                                             </div>
-
 
                                         </div>
                                         <div className='child1'>
@@ -208,7 +204,6 @@ function App() {
                                         <div className='child2'>
 
                                             <div className="flex-container">
-
 
                                                 {semester.learningGoals.map((learninggoal) => {
                                                     learningGoalDecision = '';
@@ -417,12 +412,8 @@ function App() {
                                  color='#8f5a46' strokeWidth={30} showHead={false} zIndex={1}></Xarrow></div>
 
                 </div>
-
             )
-
-
         }
-
         return (<div>Loading...</div>)
     }
 
@@ -440,26 +431,17 @@ function App() {
 
         if (aaa == 1) {
             return (
-
                 <div>
-
                     <Showdata/>
                 </div>
             )
         }
-
-
     }
 
-
     return (
-
-
         <div className="App">
             <header className="App-header">
                 <Show/>
-
-
             </header>
         </div>
     );

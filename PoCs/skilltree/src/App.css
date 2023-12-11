@@ -1,106 +1,153 @@
 .App {
-  text-align: center;
+    text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+    height: 40vmin;
+    pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
 }
 
-.tree{
-  
-  
-  background-image: url(./tree.png)
-  
+.tree {
+    background-image: url(./tree.png)
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-size: calc(10px + 2vmin);
+    color: white;
 }
 
 .App-link {
-  color: #61dafb;
+    color: #61dafb;
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .together {
-  position: absolute;
-  display: inline-block;
+    position: absolute;
+    display: inline-block;
 
 
 }
-  .parent {
+
+.parent {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(7, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     grid-row-gap: 40px;
-    }
-    
-    .child1 { grid-area: 7 / 1 / 8 / 2; }
-    .child2 { grid-area: 3 / 1 / 6 / 2; }
-    .child3 { grid-area: 1 / 1 / 2 / 2; }
-    .b { grid-area: 7 / 1 / 8 / 2; }
-    .bb { grid-area: 3 / 1 / 6 / 2; }
-    .bbb { grid-area: 1 / 1 / 2 / 2; }
+}
 
-    .flex-container {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: nowrap;
-      justify-content: space-around;
-      align-items: center;
-      align-content: normal;
-      gap: 5px;
-    }
-    .flex-container2 {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: nowrap;
-      justify-content: center;
-      align-items: center;
-      align-content: normal;
-      gap: 5px;
-    }
+.child1 {
+    grid-area: 7 / 1 / 8 / 2;
+}
 
-    .flex-items:nth-child(1) {
-      display: block;
-      flex-grow: 0;
-      flex-shrink: 1;
-      flex-basis: auto;
-      align-self: auto;
-      order: 0;
-    }
+.child2 {
+    grid-area: 3 / 1 / 6 / 2;
+}
 
-    .parent2 {
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: repeat(2, 1fr);
-      grid-column-gap: 0px;
-      grid-row-gap: 40px;
-      }
-      
-      .child21 { grid-area: 2 / 1 / 3 / 2; }
-      .child22 { grid-area: 1 / 1 / 2 / 2; }
+.child3 {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.b {
+    grid-area: 7 / 1 / 8 / 2;
+}
+
+.bb {
+    grid-area: 3 / 1 / 6 / 2;
+}
+
+.bbb {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: normal;
+    gap: 5px;
+}
+
+.flex-container2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: normal;
+    gap: 5px;
+}
+
+.flex-items:nth-child(1) {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+}
+
+.parent2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 40px;
+}
+
+.child21 {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.child22 {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.Header {
+    color: #FFD700;
+    font-size: 55px;
+}
+
+.TopCorner {
+    position: absolute;
+    display: inline-block;
+    top: 10px;
+    left: 10px;
+    background: blue;
+    font-Size: medium;
+    border-Radius: 2%;
+    padding: 10px
+}
+
+.MarginLeft{
+    margin-left: 10px;
+    width: 130px;
+    height: 60px;
+    color: white;
+    text-align: center;
+    font-size: medium;
+    background-color: blue;
+}
