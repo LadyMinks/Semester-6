@@ -1,8 +1,4 @@
-[
-  {
-    "id": 1,
-    "name": "Semester 2 Software Engineering",
-    "description": "Semester 2 for Software Engineering students",
+{
     "learningGoals": [
       {
         "id": 1,
@@ -74,7 +70,7 @@
         ]
       },
       {
-        "id": 1,
+        "id": 3,
         "name": "Advies",
         "description": "Analytical skills for Software Engineering",
         "skills": [
@@ -103,114 +99,6 @@
             "sources": "www.fontys.nl"
           }
         ]
-      },
-      {
-        "id": 1,
-        "name": "Realisatie",
-        "description": "Analytical skills for Software Engineering",
-        "skills": [
-          {
-            "id": 14,
-            "name": "Architectuur: Meerlaagse Architectuur",
-            "description": "Understanding layered architecture",
-            "sources": "www.fontys.nl"
-          },
-          {
-            "id": 15,
-            "name": "Domeinmodellen",
-            "description": "Creating domain models",
-            "sources": "www.fontys.nl"
-          },
-          {
-            "id": 16,
-            "name": "Klassendiagrammen",
-            "description": "Designing class diagrams",
-            "sources": "www.fontys.nl"
-          },
-          {
-            "id": 17,
-            "name": "Databaseontwerp",
-            "description": "Designing databases",
-            "sources": "www.fontys.nl"
-          }
-        ]
-      },
-      {
-        "id": 1,
-        "name": "Onderhoud",
-        "description": "Analytical skills for Software Engineering",
-        "skills": [
-          {
-            "id": 18,
-            "name": "Architectuur: Meerlaagse Architectuur",
-            "description": "Understanding layered architecture",
-            "sources": "www.fontys.nl"
-          },
-          {
-            "id": 19,
-            "name": "Domeinmodellen",
-            "description": "Creating domain models",
-            "sources": "www.fontys.nl"
-          },
-          {
-            "id": 20,
-            "name": "Klassendiagrammen",
-            "description": "Designing class diagrams",
-            "sources": "www.fontys.nl"
-          },
-          {
-            "id": 21,
-            "name": "Databaseontwerp",
-            "description": "Designing databases",
-            "sources": "www.fontys.nl"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": 2,
-    "name": "Semester 3 Technology",
-    "description": "Semester 3 for Technology students",
-    "learningGoals": [
-      {
-        "id": 3,
-        "name": "Testen",
-        "description": "Test skills for Technology",
-        "skills": [
-          {
-            "id": 10,
-            "name": "Geautomatiseerd (unit-) testen",
-            "description": "Understanding automated unit testing",
-            "sources": "www.fontys.nl"
-          },
-          {
-            "id": 11,
-            "name": "Acceptatietesten",
-            "description": "Performing acceptance testing",
-            "sources": "www.fontys.nl"
-          }
-        ]
-      },
-      {
-        "id": 4,
-        "name": "Object Oriented Programming",
-        "description": "OOP skills for Technology",
-        "skills": [
-          {
-            "id": 12,
-            "name": "OO Principes",
-            "description": "Understanding Object Oriented Principles",
-            "sources": "www.fontys.nl"
-          },
-          {
-            "id": 13,
-            "name": "De SOLID principes",
-            "description": "Applying SOLID principles",
-            "sources": "www.fontys.nl"
-          }
-        ]
       }
     ]
   }
-]
