@@ -243,79 +243,37 @@ function App() {
                                                                 learningGoalDecision = 'Orienting'
                                                             }
 
-                                                            // if (studentObject.studentskills.find(item => item.id == skill.id).skill1 == 'Orienting') {
-                                                            //     learningGoalStyle = {
-                                                            //         border: "#A41704 solid 5px",
-                                                            //         borderRadius: "10px",
-                                                            //         padding: "5px",
-                                                            //         display: 'inline-block',
-                                                            //         background: 'linear-gradient(to right, rgb(230 48 22) 0px, rgb(233 98 42) 100%)',
-                                                            //         color: 'black'
-                                                            //     }
-                                                            //     learningGoalDecision = 'Orienting'
-                                                            // }
-
-
-                                                            //
-                                                            // { (learningGoalDecision != 'Orienting' && studentObject.studentskills.find(item => item.id == skill.id).skill1 == 'Beginning') &&
-                                                            // <SkillList learningGoal={learninggoal} grade={Grades.BEGINNING}/>}
-                                                            if (learningGoalDecision != 'Orienting') {
-                                                                if (studentObject.studentskills.find(item => item.id == skill.id).skill1 == 'Beginning') {
-                                                                    learningGoalStyle =
-
-                                                                        {
-                                                                        border: "rgb(217 131 3) solid 5px",
-                                                                        borderRadius: "10px",
-                                                                        padding: "5px",
-                                                                        display: 'inline-block',
-                                                                        background: 'linear-gradient(to right,#ffa400 0,#ffd100 100%)',
-                                                                        color: 'black'
-                                                                    }
-                                                                    learningGoalDecision = 'Beginning'
-                                                                }
-                                                            }
-                                                            if (learningGoalDecision != 'Orienting') {
-                                                                if (learningGoalDecision != 'Beginning') {
-                                                                    if (studentObject.studentskills.find(item => item.id == skill.id).skill1 == 'Proficient') {
-                                                                        learningGoalStyle = {
-                                                                            border: "#007900 solid 5px",
-                                                                            borderRadius: "10px",
-                                                                            padding: "5px",
-                                                                            display: 'inline-block',
-                                                                            background: 'linear-gradient(to right, rgb(26 163 6) 0px, rgb(3 247 125) 100%)',
-                                                                            color: 'black'
-                                                                        }
-                                                                        learningGoalDecision = 'Proficient'
-                                                                    }
-                                                                }
-                                                            }
-                                                            if (learningGoalDecision != 'Orienting') {
-                                                                if (learningGoalDecision != 'Beginning') {
-                                                                    if (learningGoalDecision != 'Proficient') {
-                                                                        if (studentObject.studentskills.find(item => item.id == skill.id).skill1 == 'Advanced') {
-                                                                            learningGoalStyle = {
-                                                                                border: "rgb(2 141 139) solid 5px",
-                                                                                borderRadius: "10px",
-                                                                                padding: "5px",
-                                                                                display: 'inline-block',
-                                                                                background: 'linear-gradient(to right, rgb(20 157 154) 0px, rgb(6 237 232) 100%)',
-                                                                                color: 'black'
-                                                                            }
-                                                                            learningGoalDecision = 'Advanced'
-                                                                        }
-                                                                    }
-                                                                }
+                                                            {
+                                                                (learningGoalDecision != 'Orienting' && studentObject.studentskills.find(item => item.id == skill.id).skill1 == 'Beginning')
+                                                                && <LearningGoalList learningGoal={learninggoal}
+                                                                                     grade={Grades.BEGINNING}/>
+                                                                learningGoalStyle = Grades.BEGINNING;
+                                                                learningGoalDecision = 'Beginning'
                                                             }
 
+                                                            {
+                                                                (learningGoalDecision != 'Orienting' && learningGoalDecision != 'Beginning' &&
+                                                                    studentObject.studentskills.find(item => item.id == skill.id).skill1 == 'Proficient')
+                                                                && <LearningGoalList learningGoal={learninggoal}
+                                                                                     grade={Grades.PROFICIENT}/>
+                                                                learningGoalStyle = Grades.BEGINNING;
+                                                                learningGoalDecision = 'Proficient'
+                                                            }
+
+                                                            {
+                                                                (learningGoalDecision != 'Orienting' && learningGoalDecision != 'Beginning' &&
+                                                                    learningGoalDecision != 'Proficient' && studentObject.studentskills.find(item => item.id == skill.id).skill1 == 'Advanced')
+                                                                && <LearningGoalList learningGoal={learninggoal}
+                                                                grade = {Grades.ADVANCED}/>
+                                                                learningGoalStyle = Grades.ADVANCED;
+                                                                learningGoalDecision = 'Advanced'
+                                                            }
                                                         })
                                                     }
                                                     return (
-
                                                         <div className='flex-items'>
                                                             <div className='parent2'>
                                                                 <div className='child21'>
-
-
                                                                     {/*<LearningGoalList key={learninggoal.id}*/}
                                                                     {/*               learningGoal={learninggoal}*/}
                                                                     {/*               grade={learningGoalDecision}*/}

@@ -1,5 +1,5 @@
 import '../LearningGoalGradeStyles.css'
-import Xarrow from "react-xarrows";
+
 
 export default function LearningGoalList({learningGoal, grade}) {
     switch (grade) {
