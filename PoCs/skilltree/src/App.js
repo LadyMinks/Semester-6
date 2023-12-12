@@ -15,6 +15,9 @@ import studentdata from './studentskills.json';
 import {Tooltip} from 'react-tooltip';
 import {GetTrees} from './fetchtree';
 import Header from "./Components/Header";
+import SkillList from "./Components/SkillList";
+import LearningGoalList from "./Components/LearningGoalList";
+import Skill from "./Components/Skill";
 
 const cors = require('cors');
 
@@ -142,6 +145,29 @@ function App() {
         }, {value: "Sebastiaan", label: 'Sebastiaan'}]
         const [selects, setSelects] = useState();
 
+        const Grades = Object.freeze({
+            ORIENTATING: Symbol("orientating"),
+            BEGINNING: Symbol("beginning"),
+            PROFICIENT: Symbol("proficient"),
+            ADVANCED: Symbol("advanced"),
+        });
+
+        function setLearningGoalStyle(grade) {
+            switch (grade) {
+                case grade.ORIENTATING:
+                    return (
+                        <div className="LGOrientating"/>)
+                case grade.BEGINNING:
+                    return (
+                        <p className="LGBeginning"/>)
+                case grade.PROFICIENT:
+                    return (
+                        <p className="LGProficient"/>)
+                case grade.ADVANCED:
+                    return (
+                        <p className="LGAdvanced"/>)
+            }
+        }
 
         let studentObject
         let learningGoalStyle;
@@ -209,20 +235,35 @@ function App() {
                                                     lgRef.current = lgRef.current + 1;
                                                     {
                                                         learninggoal.skills.map((skill) => {
-                                                            if (studentObject.studentskills.find(item => item.id == skill.id).skill1 == 'Orienting') {
-                                                                learningGoalStyle = {
-                                                                    border: "#A41704 solid 5px",
-                                                                    borderRadius: "10px",
-                                                                    padding: "5px",
-                                                                    display: 'inline-block',
-                                                                    background: 'linear-gradient(to right, rgb(230 48 22) 0px, rgb(233 98 42) 100%)',
-                                                                    color: 'black'
-                                                                }
+                                                            {
+                                                                studentObject.studentskills.find(item => item.id == skill.id).skill1 == 'Orienting'
+                                                                && <LearningGoalList learningGoal={learninggoal}
+                                                                                     grade={Grades.ORIENTATING}/>
+                                                                learningGoalStyle = Grades.ORIENTATING;
                                                                 learningGoalDecision = 'Orienting'
                                                             }
+
+                                                            // if (studentObject.studentskills.find(item => item.id == skill.id).skill1 == 'Orienting') {
+                                                            //     learningGoalStyle = {
+                                                            //         border: "#A41704 solid 5px",
+                                                            //         borderRadius: "10px",
+                                                            //         padding: "5px",
+                                                            //         display: 'inline-block',
+                                                            //         background: 'linear-gradient(to right, rgb(230 48 22) 0px, rgb(233 98 42) 100%)',
+                                                            //         color: 'black'
+                                                            //     }
+                                                            //     learningGoalDecision = 'Orienting'
+                                                            // }
+
+
+                                                            //
+                                                            // { (learningGoalDecision != 'Orienting' && studentObject.studentskills.find(item => item.id == skill.id).skill1 == 'Beginning') &&
+                                                            // <SkillList learningGoal={learninggoal} grade={Grades.BEGINNING}/>}
                                                             if (learningGoalDecision != 'Orienting') {
                                                                 if (studentObject.studentskills.find(item => item.id == skill.id).skill1 == 'Beginning') {
-                                                                    learningGoalStyle = {
+                                                                    learningGoalStyle =
+
+                                                                        {
                                                                         border: "rgb(217 131 3) solid 5px",
                                                                         borderRadius: "10px",
                                                                         padding: "5px",
@@ -275,14 +316,14 @@ function App() {
                                                                 <div className='child21'>
 
 
-                                                                    {/*<LearningGoals key={learninggoal.id}*/}
+                                                                    {/*<LearningGoalList key={learninggoal.id}*/}
                                                                     {/*               learningGoal={learninggoal}*/}
                                                                     {/*               grade={learningGoalDecision}*/}
                                                                     {/*               id={lgid}*/}
                                                                     {/*/!*               ref={lgRef}*!/*/}
-                                                                    {/*></LearningGoals>*/}
+                                                                    {/*></LearningGoalList>*/}
                                                                     <p key={learninggoal.id} id={lgid} ref={lgRef}
-                                                                       style={learningGoalStyle}>
+                                                                       style={setLearningGoalStyle(learningGoalStyle)}>
                                                                         {learninggoal.name}
                                                                     </p>
                                                                     <Xarrow start={semesterRef} end={lgRef}
@@ -297,6 +338,12 @@ function App() {
                                                                             i = i + 1;
 
                                                                             let boxstyle2;
+
+                                                                            {
+                                                                                studentObject.studentskills.find(item => item.id == i).skill1 == 'Orienting' &&
+                                                                                <SkillList learningGoal={learninggoal}
+                                                                                           grade={Grades.ORIENTATING}/>
+                                                                            }
 
                                                                             if (studentObject.studentskills.find(item => item.id == i).skill1 == 'Orienting') {
                                                                                 boxstyle2 = {
@@ -378,27 +425,16 @@ function App() {
                                                                                             showHead={false}/>
                                                                                 </div>
                                                                             )
-
                                                                         })}
-
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-
                                                     )
-
-
                                                 })}
-
                                             </div>
-
-
                                         </div>
-
                                     </div>
-
-
                                 </div>
                             )
                         }
