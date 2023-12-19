@@ -1,32 +1,17 @@
-import React from "react";
-import Skill from "./Skill"
+import SkillGrade from "./SkillGrade";
 
+export default function SkillList({skills, student}){
 
-export default function SkillList({learningGoal, grade}) {
-    switch (grade) {
-        case grade.ORIENTATING:
-            return (
-                <div className="SKOrientating" key={learningGoal.id}>
-                    {learningGoal.name}
-                </div>
-            )
-        case grade.BEGINNING:
-            return (
-                <div className="SKBeginning" key={learningGoal.id}>
-                    {learningGoal.name}
-                </div>
-            )
-        case grade.PROFICIENT:
-            return (
-                <div className="SKProficient" key={learningGoal.id}>
-                    {learningGoal.name}
-                </div>
-            )
-        case grade.ADVANCED:
-            return (
-                <div className="SKPAdvanced" key={learningGoal.id}>
-                    {learningGoal.name}
-                </div>
-            )
-    }
+    const grades = new Map();
+    const gradeList = student.studentskills;
+
+    gradeList.forEach(skill =>
+        grades.set(skill.id, skill.skill1)
+    );
+
+    return (
+        <section className= "d-flex flex-row">
+            {skills.map(skill => <SkillGrade key={skill.id} skill={skill} grades={grades}/>)}
+        </section>
+    )
 }

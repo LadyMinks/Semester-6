@@ -15,9 +15,9 @@ import studentdata from './studentskills.json';
 import {Tooltip} from 'react-tooltip';
 import {GetTrees} from './fetchtree';
 import Header from "./Components/Header";
-import SkillList from "./Components/SkillList";
+import SkillGrade from "./Components/SkillGrade";
 import LearningGoalList from "./Components/LearningGoalList";
-import Skill from "./Components/Skill";
+import SkillList from "./Components/SkillList";
 
 const cors = require('cors');
 
@@ -292,66 +292,69 @@ function App() {
                                                                 <div className='child22'>
                                                                     <div className="flex-container">
 
+                                                                        <SkillList skills={learninggoal.skills} student ={studentObject}></SkillList>
+
                                                                         {learninggoal.skills.map((skill) => {
                                                                             i = i + 1;
 
-                                                                            let boxstyle2;
-
-                                                                            {
-                                                                                studentObject.studentskills.find(item => item.id == i).skill1 == 'Orienting' &&
-                                                                                <SkillList learningGoal={learninggoal}
-                                                                                           grade={Grades.ORIENTATING}/>
-                                                                            }
-
-                                                                            if (studentObject.studentskills.find(item => item.id == i).skill1 == 'Orienting') {
-                                                                                boxstyle2 = {
-                                                                                    border: "#A41704 solid 5px",
-                                                                                    borderRadius: "50%",
-                                                                                    width: "40px",
-                                                                                    height: "40px",
-                                                                                    padding: "10px",
-                                                                                    display: 'inline-block',
-                                                                                    background: 'linear-gradient(to right, rgb(230 48 22) 0px, rgb(233 98 42) 100%)',
-                                                                                    color: 'black'
-                                                                                };
-                                                                            }
-                                                                            if (studentObject.studentskills.find(item => item.id == i).skill1 == 'Beginning') {
-                                                                                boxstyle2 = {
-                                                                                    border: "rgb(217 131 3) solid 5px",
-                                                                                    borderRadius: "50%",
-                                                                                    width: "40px",
-                                                                                    height: "40px",
-                                                                                    padding: "10px",
-                                                                                    display: 'inline-block',
-                                                                                    background: 'linear-gradient(to right,#ffa400 0,#ffd100 100%)',
-                                                                                    color: 'black'
-                                                                                };
-                                                                            }
-                                                                            if (studentObject.studentskills.find(item => item.id == i).skill1 == 'Proficient') {
-                                                                                boxstyle2 = {
-                                                                                    border: "#007900 solid 5px",
-                                                                                    borderRadius: "50%",
-                                                                                    width: "40px",
-                                                                                    height: "40px",
-                                                                                    padding: "10px",
-                                                                                    display: 'inline-block',
-                                                                                    background: 'linear-gradient(to right, rgb(26 163 6) 0px, rgb(3 247 125) 100%)',
-                                                                                    color: 'black'
-                                                                                };
-                                                                            }
-                                                                            if (studentObject.studentskills.find(item => item.id == i).skill1 == 'Advanced') {
-                                                                                boxstyle2 = {
-                                                                                    border: "rgb(2 141 139) solid 5px",
-                                                                                    borderRadius: "50%",
-                                                                                    width: "40px",
-                                                                                    height: "40px",
-                                                                                    padding: "10px",
-                                                                                    display: 'inline-block',
-                                                                                    background: 'linear-gradient(to right, rgb(20 157 154) 0px, rgb(6 237 232) 100%)',
-                                                                                    color: 'black'
-                                                                                };
-                                                                            }
-                                                                            skillRef.current = skillRef.current + 1;
+                                                                            // let boxstyle2;
+                                                                            //
+                                                                            //
+                                                                            // {
+                                                                            //     studentObject.studentskills.find(item => item.id == i).skill1 == 'Orienting' &&
+                                                                            //     <SkillGrade learningGoal={learninggoal}
+                                                                            //                 grade={Grades.ORIENTATING}/>
+                                                                            // }
+                                                                            //
+                                                                            // if (studentObject.studentskills.find(item => item.id == i).skill1 == 'Orienting') {
+                                                                            //     boxstyle2 = {
+                                                                            //         border: "#A41704 solid 5px",
+                                                                            //         borderRadius: "50%",
+                                                                            //         width: "40px",
+                                                                            //         height: "40px",
+                                                                            //         padding: "10px",
+                                                                            //         display: 'inline-block',
+                                                                            //         background: 'linear-gradient(to right, rgb(230 48 22) 0px, rgb(233 98 42) 100%)',
+                                                                            //         color: 'black'
+                                                                            //     };
+                                                                            // }
+                                                                            // if (studentObject.studentskills.find(item => item.id == i).skill1 == 'Beginning') {
+                                                                            //     boxstyle2 = {
+                                                                            //         border: "rgb(217 131 3) solid 5px",
+                                                                            //         borderRadius: "50%",
+                                                                            //         width: "40px",
+                                                                            //         height: "40px",
+                                                                            //         padding: "10px",
+                                                                            //         display: 'inline-block',
+                                                                            //         background: 'linear-gradient(to right,#ffa400 0,#ffd100 100%)',
+                                                                            //         color: 'black'
+                                                                            //     };
+                                                                            // }
+                                                                            // if (studentObject.studentskills.find(item => item.id == i).skill1 == 'Proficient') {
+                                                                            //     boxstyle2 = {
+                                                                            //         border: "#007900 solid 5px",
+                                                                            //         borderRadius: "50%",
+                                                                            //         width: "40px",
+                                                                            //         height: "40px",
+                                                                            //         padding: "10px",
+                                                                            //         display: 'inline-block',
+                                                                            //         background: 'linear-gradient(to right, rgb(26 163 6) 0px, rgb(3 247 125) 100%)',
+                                                                            //         color: 'black'
+                                                                            //     };
+                                                                            // }
+                                                                            // if (studentObject.studentskills.find(item => item.id == i).skill1 == 'Advanced') {
+                                                                            //     boxstyle2 = {
+                                                                            //         border: "rgb(2 141 139) solid 5px",
+                                                                            //         borderRadius: "50%",
+                                                                            //         width: "40px",
+                                                                            //         height: "40px",
+                                                                            //         padding: "10px",
+                                                                            //         display: 'inline-block',
+                                                                            //         background: 'linear-gradient(to right, rgb(20 157 154) 0px, rgb(6 237 232) 100%)',
+                                                                            //         color: 'black'
+                                                                            //     };
+                                                                            // }
+                                                                            // skillRef.current = skillRef.current + 1;
 
                                                                             /*document.getElementById(lgid).style={border: "rgb(2 141 139) solid 5px", borderRadius: "50%", width:"50px",height:"50px",padding: "10px",display: 'inline-block',background:'linear-gradient(to right, rgb(20 157 154) 0px, rgb(6 237 232) 100%)',color:'black'}*/
                                                                             return (
@@ -365,7 +368,8 @@ function App() {
 
                                                                                         <div key={skill.id}
                                                                                              ref={skillRef}
-                                                                                             style={boxstyle2}>
+                                                                                             // style={boxstyle2}
+                                                                                        >
 
                                                                                             {skill.id}
 
