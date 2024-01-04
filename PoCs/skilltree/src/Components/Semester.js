@@ -1,8 +1,7 @@
 import '../Components.css'
-import learningGoal from "./LearningGoal";
-import LearningGoal from "./LearningGoal";
 import Xarrow from "react-xarrows";
 import {useRef} from "react";
+import LearningGoalFlex from "./LearningGoalFlex";
 
 export default function Semester({semester, student}) {
 
@@ -12,8 +11,8 @@ export default function Semester({semester, student}) {
 
     return (
         <div className="SemesterFlex">
-
             <div className='parent'>
+
                 <div className='child1'>
                     <div ref={semesterRef} className="SemesterStyle">
                         {semester.name}
@@ -21,15 +20,13 @@ export default function Semester({semester, student}) {
                 </div>
 
                 <div className='child2'>
-
                     <div className="LearningGoalListFlex">
                         {semester.learningGoals.map((learningGoal) => {
                                 lgRef.current = lgRef.current + 1;
                                 return (
                                     <div>
-
                                         <div key={learningGoal.id} ref={lgRef}>
-                                            <LearningGoal learningGoal={learningGoal} student={student}/>
+                                            <LearningGoalFlex learningGoal={learningGoal} student={student}/>
                                         </div>
                                         <Xarrow start={semesterRef}
                                                 end={lgRef}
@@ -41,10 +38,10 @@ export default function Semester({semester, student}) {
                                                 showHead={false}/>
                                     </div>
                                 )
-                            }
-                        )}
+                            })}
                     </div>
                 </div>
+
             </div>
         </div>
     )

@@ -30,7 +30,6 @@ function Testing() {
 
                     return (
                         <div>
-
                                     <Header></Header>
 
                                     <div className="TopCorner"> Gedeeld met mij:

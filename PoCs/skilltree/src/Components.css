@@ -16,7 +16,7 @@
     align-content: center;
 }
 
-.LearningGoalFlex{
+.SingleLearningGoalFlex{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -25,4 +25,21 @@
     padding-left: 10px;
     padding-right: 10px;
     margin-bottom: 50px;
+}
+
+.SkillListFlex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+}
+
+.SingleSkillFlex{
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+    display: inline-block;
 }
