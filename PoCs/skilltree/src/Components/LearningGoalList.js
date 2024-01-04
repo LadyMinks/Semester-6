@@ -1,31 +1,11 @@
 import '../LearningGoalGradeStyles.css'
+import LearningGoal from "./LearningGoal";
 
 
-export default function LearningGoalList({learningGoal, grade}) {
-    switch (grade) {
-        case grade.ORIENTATING:
-            return (
-                <div className="LGOrientating" key={learningGoal.id}>
-                    {learningGoal.name}
-                </div>
-            )
-        case grade.BEGINNING:
-            return (
-                <div className="LGBeginning" key={learningGoal.id}>
-                    {learningGoal.name}
-                </div>
-            )
-        case grade.PROFICIENT:
-            return (
-                <div className="LGProficient" key={learningGoal.id}>
-                    {learningGoal.name}
-                </div>
-            )
-        case grade.ADVANCED:
-            return (
-                <div className="LGPAdvanced" key={learningGoal.id}>
-                    {learningGoal.name}
-                </div>
-            )
-    }
+export default function LearningGoalList({learningGoals, student}) {
+    return(
+        <div className="d-flex flex-row">
+            {learningGoals.map(learningGoal => <LearningGoal learningGoal={learningGoal} student={student}/>)}
+        </div>
+    )
 }

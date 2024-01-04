@@ -1,4 +1,5 @@
 .App {
+    background: rgb(40 44 53);
     text-align: center;
 }
 
@@ -55,10 +56,12 @@
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     grid-row-gap: 40px;
+    background: rgb(40 44 53) ;
 }
 
 .child1 {
     grid-area: 7 / 1 / 8 / 2;
+    color: #ffd100;
 }
 
 .child2 {
@@ -150,4 +153,13 @@
     text-align: center;
     font-size: medium;
     background-color: blue;
+}
+
+.SemesterStyle{
+    border: grey solid 2px;
+    border-radius: 10px;
+    padding: 5px;
+    display: inline-block;
+    color: #FFD700;
+    z-index: 2;
 }
