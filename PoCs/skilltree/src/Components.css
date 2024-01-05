@@ -43,3 +43,26 @@
     justify-items: center;
     display: inline-block;
 }
+
+.HeaderFlex{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+}
+
+.Header {
+    color: #FFD700;
+    font-size: 55px;
+    flex: 1 1 auto;
+}
+
+.TopCorner {
+    position: absolute;
+    display: inline-block;
+    top: 10px;
+    left: 10px;
+    background: blue;
+    font-Size: medium;
+    border-Radius: 2%;
+    padding: 10px
+}
