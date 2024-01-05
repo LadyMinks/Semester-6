@@ -4,9 +4,8 @@ import data from './db.json';
 import studentData from './studentskills.json';
 import {Tooltip} from 'react-tooltip';
 import studentdata from "./studentskills.json";
-import Header from "./Components/Header";
 import Semester from "./Components/Semester";
-import TestingHeader from "./Components/TestingHeader";
+import Header from "./Components/Header";
 
 
 const header = {color: '#FFD700', fontSize: "55px"}
@@ -17,10 +16,6 @@ function Testing() {
 
     const [selectedStudent, setSelectedStudent] = useState(studentData[0]);
 
-    function getStudent(student){
-        setSelectedStudent(student);
-    }
-
     return (
         <div className="App">
             {data.map((semester) => {
@@ -29,18 +24,9 @@ function Testing() {
 
                     return (
                         <div>
-                                    <TestingHeader studentData={studentData} getStudent={getStudent}/>
 
-                                    {/*<div className="TopCorner"> Gedeeld met mij:*/}
-                                    {/*    <select className="MarginLeft"*/}
-                                    {/*            value={selects}*/}
-                                    {/*            onChange={e => setSelects(e.target.value)}>*/}
+                                    <Header studentData={studentData} setStudent={setSelectedStudent}/>
 
-                                    {/*        {studentdata.map((student) => {*/}
-                                    {/*            return (<option>{student.name}</option>)*/}
-                                    {/*        })}*/}
-                                    {/*    </select>*/}
-                                    {/*</div>*/}
                                     <div >
                                         <Semester semester={semester} student={selectedStudent}/>
                                     </div>
