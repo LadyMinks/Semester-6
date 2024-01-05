@@ -1,36 +1,26 @@
-.LGOrientating{
-
-    border: #A41704 solid 5px;
+.LGOrientating, .LGBeginning, .LGProficient, .LGAdvanced{
     border-radius: 10px;
     padding: 5px;
     display: inline-block;
     color: black;
+}
+
+.LGOrientating{
+    border: #A41704 solid 5px;
     background:linear-gradient(to right, rgb(230 48 22) 0px, rgb(233 98 42) 100%) ;
 }
 
 .LGBeginning{
     border: rgb(217 131 3) solid 5px;
-    border-radius: 10px;
-    padding: 5px;
-    display: inline-block;
-    color: black;
     background: linear-gradient(to right,#ffa400 0,#ffd100 100%);
 }
 
 .LGProficient{
     border: #007900 solid 5px;
-    border-radius: 10px;
-    padding: 5px;
-    display: inline-block;
-    color: black;
     background: linear-gradient(to right, rgb(26 163 6) 0px, rgb(3 247 125) 100%);
 }
 
 .LGAdvanced{
     border: rgb(2 141 139) solid 5px;
-    border-radius: 10px;
-    padding: 5px;
-    display: inline-block;
-    color: black;
     background: linear-gradient(to right, rgb(20 157 154) 0px, rgb(6 237 232) 100%);
 }

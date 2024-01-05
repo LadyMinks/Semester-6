@@ -23,7 +23,7 @@ export default function LearningGoalGrade({ learningGoal, grades}) {
         } else if (lgGrades.includes('Beginning')) {
             setGrade('LGBeginning');
         } else if (lgGrades.includes('Proficient')) {
-            setGrade('LGBeginning');
+            setGrade('LGProficient');
         } else if (lgGrades.includes('Advanced')) {
             setGrade('LGAdvanced');
         }
