@@ -1,10 +1,11 @@
-import SkillList from "./SkillList";
 import SkillGrade from "./SkillGrade";
 import Xarrow from "react-xarrows";
-import {useRef} from "react";
-
+import {useRef, useState} from "react";
+import LearningGoalGrade from "./LearningGoalGrade";
 
 export default function LearningGoalFlex({learningGoal, student}) {
+
+    const [grade, setGrade] = useState([])
 
     let lgRef = useRef(0);
     let skillRef = useRef(1);
@@ -16,14 +17,13 @@ export default function LearningGoalFlex({learningGoal, student}) {
         grades.set(skill.id, skill.skill1)
     );
 
-
     return (
         <div className="SingleLearningGoalFlex ">
             <div className='parent2'>
 
                 <div className='child21'>
                     <div ref={lgRef} id={"learningGoalId"}>
-                        {learningGoal.name}
+                        <LearningGoalGrade learningGoal={learningGoal} grades={grades}/>
                     </div>
                 </div>
 
