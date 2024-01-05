@@ -6,44 +6,43 @@ import {Tooltip} from 'react-tooltip';
 import studentdata from "./studentskills.json";
 import Header from "./Components/Header";
 import Semester from "./Components/Semester";
+import TestingHeader from "./Components/TestingHeader";
 
 
 const header = {color: '#FFD700', fontSize: "55px"}
 
 function Testing() {
-    let studentObject
-    const [selects, setSelects] = useState();
+
     let semesterRef = useRef(0);
 
+    const [selectedStudent, setSelectedStudent] = useState(studentData[0]);
+
+    function getStudent(student){
+        setSelectedStudent(student);
+    }
 
     return (
         <div className="App">
             {data.map((semester) => {
-                if (selects == undefined) {
-                    studentObject = studentdata.find(e => e.name == 'Antonio');
-                }
-                if (selects !== undefined) {
-                    studentObject = studentdata.find(e => e.name == selects);
-                }
 
                 if (semester.name == 'Semester 2 Software Engineering') {
 
                     return (
                         <div>
-                                    <Header></Header>
+                                    <TestingHeader studentData={studentData} getStudent={getStudent}/>
 
-                                    <div className="TopCorner"> Gedeeld met mij:
-                                        <select className="MarginLeft" value={selects}
-                                                onChange={e => setSelects(e.target.value)}>
+                                    {/*<div className="TopCorner"> Gedeeld met mij:*/}
+                                    {/*    <select className="MarginLeft"*/}
+                                    {/*            value={selects}*/}
+                                    {/*            onChange={e => setSelects(e.target.value)}>*/}
 
-                                            {studentdata.map((student) => {
-                                                return (<option>{student.name}</option>)
-                                            })}
-                                        </select>
-                                    </div>
+                                    {/*        {studentdata.map((student) => {*/}
+                                    {/*            return (<option>{student.name}</option>)*/}
+                                    {/*        })}*/}
+                                    {/*    </select>*/}
+                                    {/*</div>*/}
                                     <div >
-                                        <Semester semester={semester} student={studentObject}>
-                                        </Semester>
+                                        <Semester semester={semester} student={selectedStudent}/>
                                     </div>
                         </div>
 
