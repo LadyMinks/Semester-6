@@ -19,23 +19,16 @@ function Testing() {
     return (
         <div className="App">
             {data.map((semester) => {
-
-                if (semester.name == 'Semester 2 Software Engineering') {
-
+                if (semester.name === 'Semester 2 Software Engineering') {
                     return (
                         <div>
-
-                                    <Header studentData={studentData} setStudent={setSelectedStudent}/>
-
-                                    <div >
-                                        <Semester semester={semester} student={selectedStudent}/>
-                                    </div>
+                            <Header studentData={studentData} setStudent={setSelectedStudent}/>
+                            <Semester semester={semester} student={selectedStudent}/>
                         </div>
 
                     )
                 }
             })}
-
         </div>
     )
 }
