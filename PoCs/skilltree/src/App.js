@@ -8,16 +8,15 @@ import './SkillGradeStyle.css'
 
 //import { maptrees } from './maptree';
 import {semester} from './semester';
-import {learninggoal} from './learninggoal';
 import Xarrow from "react-xarrows";
 import data from './db.json';
 import studentdata from './studentskills.json';
 import {Tooltip} from 'react-tooltip';
 import {GetTrees} from './fetchtree';
-import Header from "./Components/Header";
 import SkillGrade from "./Components/SkillGrade";
-import LearningGoalList from "./Components/LearningGoalList";
 import SkillList from "./Components/SkillList";
+import learningGoal from "./Components/LearningGoalFlex";
+import LearningGoal from "./Components/LearningGoalFlex";
 
 const cors = require('cors');
 
@@ -199,8 +198,6 @@ function App() {
                                     <div className='parent'>
 
                                         <div className="child3">
-                                            <Header></Header>
-
                                             <div style={topcorner}> Gedeeld met mij:
                                                 <select style={marginleft} value={selects}
                                                         onChange={e => setSelects(e.target.value)}>
@@ -217,6 +214,7 @@ function App() {
                                                 {semester.name}
                                             </div>
                                         </div>
+
                                         <div className='child2'>
 
                                             <div className="flex-container">
@@ -233,43 +231,43 @@ function App() {
                                                     lgid = lgid + 'g';
                                                     grid2 = grid2 + 'c';
                                                     lgRef.current = lgRef.current + 1;
-                                                    {
-                                                        learninggoal.skills.map((skill) => {
-                                                            {
-                                                                studentObject.studentskills.find(item => item.id == skill.id).skill1 == 'Orienting'
-                                                                && <LearningGoalList learningGoal={learninggoal}
-                                                                                     grade={Grades.ORIENTATING}/>
-                                                                learningGoalStyle = Grades.ORIENTATING;
-                                                                learningGoalDecision = 'Orienting'
-                                                            }
-
-                                                            {
-                                                                (learningGoalDecision != 'Orienting' && studentObject.studentskills.find(item => item.id == skill.id).skill1 == 'Beginning')
-                                                                && <LearningGoalList learningGoal={learninggoal}
-                                                                                     grade={Grades.BEGINNING}/>
-                                                                learningGoalStyle = Grades.BEGINNING;
-                                                                learningGoalDecision = 'Beginning'
-                                                            }
-
-                                                            {
-                                                                (learningGoalDecision != 'Orienting' && learningGoalDecision != 'Beginning' &&
-                                                                    studentObject.studentskills.find(item => item.id == skill.id).skill1 == 'Proficient')
-                                                                && <LearningGoalList learningGoal={learninggoal}
-                                                                                     grade={Grades.PROFICIENT}/>
-                                                                learningGoalStyle = Grades.BEGINNING;
-                                                                learningGoalDecision = 'Proficient'
-                                                            }
-
-                                                            {
-                                                                (learningGoalDecision != 'Orienting' && learningGoalDecision != 'Beginning' &&
-                                                                    learningGoalDecision != 'Proficient' && studentObject.studentskills.find(item => item.id == skill.id).skill1 == 'Advanced')
-                                                                && <LearningGoalList learningGoal={learninggoal}
-                                                                grade = {Grades.ADVANCED}/>
-                                                                learningGoalStyle = Grades.ADVANCED;
-                                                                learningGoalDecision = 'Advanced'
-                                                            }
-                                                        })
-                                                    }
+                                                    // {
+                                                    //     learninggoal.skills.map((skill) => {
+                                                    //         {
+                                                    //             studentObject.studentskills.find(item => item.id == skill.id).skill1 == 'Orienting'
+                                                    //             && <LearningGoalList learningGoal={learninggoal}
+                                                    //                                  grade={Grades.ORIENTATING}/>
+                                                    //             learningGoalStyle = Grades.ORIENTATING;
+                                                    //             learningGoalDecision = 'Orienting'
+                                                    //         }
+                                                    //
+                                                    //         {
+                                                    //             (learningGoalDecision != 'Orienting' && studentObject.studentskills.find(item => item.id == skill.id).skill1 == 'Beginning')
+                                                    //             && <LearningGoalList learningGoal={learninggoal}
+                                                    //                                  grade={Grades.BEGINNING}/>
+                                                    //             learningGoalStyle = Grades.BEGINNING;
+                                                    //             learningGoalDecision = 'Beginning'
+                                                    //         }
+                                                    //
+                                                    //         {
+                                                    //             (learningGoalDecision != 'Orienting' && learningGoalDecision != 'Beginning' &&
+                                                    //                 studentObject.studentskills.find(item => item.id == skill.id).skill1 == 'Proficient')
+                                                    //             && <LearningGoalList learningGoal={learninggoal}
+                                                    //                                  grade={Grades.PROFICIENT}/>
+                                                    //             learningGoalStyle = Grades.BEGINNING;
+                                                    //             learningGoalDecision = 'Proficient'
+                                                    //         }
+                                                    //
+                                                    //         {
+                                                    //             (learningGoalDecision != 'Orienting' && learningGoalDecision != 'Beginning' &&
+                                                    //                 learningGoalDecision != 'Proficient' && studentObject.studentskills.find(item => item.id == skill.id).skill1 == 'Advanced')
+                                                    //             && <LearningGoalList learningGoal={learninggoal}
+                                                    //             grade = {Grades.ADVANCED}/>
+                                                    //             learningGoalStyle = Grades.ADVANCED;
+                                                    //             learningGoalDecision = 'Advanced'
+                                                    //         }
+                                                    //     })
+                                                    // }
                                                     return (
                                                         <div className='flex-items'>
                                                             <div className='parent2'>
@@ -278,19 +276,28 @@ function App() {
                                                                     {/*               learningGoal={learninggoal}*/}
                                                                     {/*               grade={learningGoalDecision}*/}
                                                                     {/*               id={lgid}*/}
-                                                                    {/*/!*               ref={lgRef}*!/*/}
+                                                                    {/*               ref={lgRef}*/}
                                                                     {/*></LearningGoalList>*/}
                                                                     <p key={learninggoal.id} id={lgid} ref={lgRef}
                                                                        style={setLearningGoalStyle(learningGoalStyle)}>
                                                                         {learninggoal.name}
                                                                     </p>
-                                                                    <Xarrow start={semesterRef} end={lgRef}
-                                                                            startAnchor={'top'} endAnchor={'bottom'}
-                                                                            color='#8f5a46' strokeWidth={25}
+                                                                    <Xarrow start={semesterRef}
+                                                                            end={lgRef}
+                                                                            startAnchor={'top'}
+                                                                            endAnchor={'bottom'}
+                                                                            color='#8f5a46'
+                                                                            strokeWidth={25}
                                                                             showHead={false}/>
                                                                 </div>
                                                                 <div className='child22'>
                                                                     <div className="flex-container">
+
+                                                                        {/*<section>*/}
+                                                                        {/*    {semester.learningGoals.map(learningGoal => <LearningGoal learningGoal={learningGoal} student={studentObject}/>)}*/}
+                                                                        {/*</section>*/}
+
+                                                                        {/*<LearningGoalList learningGoals={semester.learningGoals} student={studentObject}></LearningGoalList>*/}
 
                                                                         <SkillList skills={learninggoal.skills} student ={studentObject}></SkillList>
 
