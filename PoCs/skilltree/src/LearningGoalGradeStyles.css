@@ -12,7 +12,7 @@
 
 .LGBeginning{
     border: rgb(217 131 3) solid 5px;
-    background: linear-gradient(to right,#ffa400 0,#ffd100 100%);
+    background: linear-gradient(to right,rgb(255 164 0) 0, rgb(255 209 0) 100%);
 }
 
 .LGProficient{
