@@ -1,13 +1,14 @@
-import React, {useState} from "react";
 import '../SkillGradeStyle.css'
 import {Tooltip} from "react-tooltip";
 
-export default function SkillGrade({skill, grades}) {
+// SkillGrade needs the current skill and the corresponding grade.
+export default function SkillGrade({skill, grade}) {
 
-    const grade = "SK" + grades.get(skill.id.toString());
+    // "SK" is added to grade, to match the styling name.
+    const skillGrade = "SK" + grade;
 
     return (
-        <div className={grade}>
+        <div className={skillGrade}>
             <div className='flex-items'>
 
                 <a

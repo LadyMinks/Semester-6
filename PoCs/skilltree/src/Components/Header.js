@@ -2,8 +2,10 @@ import {useState} from "react";
 import tree from "../tree.png";
 import '../Components.css'
 
+// Header needs studentData.json and the method setStudent. The returned value will be given back to its parent.
 export default function Header({studentData, setStudent}) {
 
+    // Necessary to determine the student needed for the semester. Returned value will be given back to its parent.
     const [selectedStudent, setSelectedStudent] = useState();
 
     return (
@@ -25,7 +27,6 @@ export default function Header({studentData, setStudent}) {
                 </label>
             </div>
 
-
             <div className="p-2 Header">
                 <div className="flex-container2">
                     <img src={tree}
@@ -36,6 +37,5 @@ export default function Header({studentData, setStudent}) {
                 </div>
             </div>
         </div>
-
     )
 }

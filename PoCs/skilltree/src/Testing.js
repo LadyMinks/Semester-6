@@ -1,19 +1,13 @@
 import {useState, useEffect, useRef} from 'react';
-import Xarrow from "react-xarrows";
 import data from './db.json';
 import studentData from './studentskills.json';
-import {Tooltip} from 'react-tooltip';
-import studentdata from "./studentskills.json";
 import Semester from "./Components/Semester";
 import Header from "./Components/Header";
-
-
-const header = {color: '#FFD700', fontSize: "55px"}
+import "./App.css"
 
 function Testing() {
 
-    let semesterRef = useRef(0);
-
+    // This method is used to receive the selected student from the Header, which is then given to Semester.
     const [selectedStudent, setSelectedStudent] = useState(studentData[0]);
 
     return (
@@ -25,7 +19,6 @@ function Testing() {
                             <Header studentData={studentData} setStudent={setSelectedStudent}/>
                             <Semester semester={semester} student={selectedStudent}/>
                         </div>
-
                     )
                 }
             })}
